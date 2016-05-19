@@ -182,7 +182,7 @@ Compiling GCD program:
 
 ![enter image description here](http://i.imgur.com/ivG1kIR.png)
 
-The compiler may be developing in the future.
+The compiler may be developed in the future.
 
 Wojciech Pratkowiecki
 II UWr
