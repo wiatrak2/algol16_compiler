@@ -1,0 +1,47 @@
+program Nested_procedures
+	procedure level1_1()
+		procedure level2_1()
+		begin
+			write 21;
+			call level2_2()
+		end 
+		procedure level2_2()
+			procedure level3_1()
+			begin
+				write 31;
+				write level3_2()
+			end
+			procedure level3_2()
+				procedure level4_1()
+				begin
+					write 41;
+					call level4_2()
+				end
+				procedure level4_2()
+				begin
+					write 42
+				end
+				procedure level4_3()
+				begin
+					return 43
+				end
+			begin
+				write 32;
+				call level4_1();
+				return level4_3()
+			end
+		begin
+			write 22;
+			call level3_1()
+		end
+	begin
+		write 11;
+		call level2_1()
+	end
+begin
+	write 0;
+	call level1_1()
+	(*output: 0 (as main program block), 11, 12, 21, 22, 31, 32, 41, 42, 43 which are numbers of following procedures*)
+end
+
+

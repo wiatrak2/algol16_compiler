@@ -1,0 +1,55 @@
+program Functions
+local n
+	procedure Seq_sum()
+		begin
+			return (n * (n + 1)) div 2
+		end
+
+	procedure Square()
+		begin
+			return n * n
+		end
+
+	procedure Sign()
+		begin
+			if n < 0 then
+			 return -1 
+			else
+				if n = 0 then
+					return 0
+				fi;
+				return 1
+			fi
+		end
+
+local tmp1, tmp2
+
+	procedure Fact()
+		procedure check_sign()
+			begin
+				if n <= 0 then
+					n := 1
+				fi
+			end
+		begin
+			call check_sign();
+			tmp1 := 2;
+			tmp2 := 1;
+			while tmp1 <= n do
+				tmp2 := tmp2 * tmp1;
+				tmp1 := tmp1 + 1
+			done;
+			return tmp2
+	end
+
+	procedure Math()
+		begin
+			write Sign();
+			write Square();
+			write Seq_sum();
+			write Fact()		
+		end
+begin
+	read n;
+	call Math()
+end

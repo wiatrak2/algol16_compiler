@@ -1,0 +1,16 @@
+program Procedure
+local n
+	procedure Proc()
+		procedure Nested_Proc()
+		begin
+			write n div 4
+		end
+	begin
+		write n;
+		call Nested_Proc();
+		return 42
+	end
+begin
+	n := 8;
+	write Proc()
+end

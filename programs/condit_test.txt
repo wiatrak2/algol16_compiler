@@ -1,0 +1,46 @@
+program condit_test
+local x, y
+begin 
+  x := -32767;
+  y := -32768;
+  if x < y then write -1 else write 1 fi;
+
+  if not x > y or x = y or x < y then write -2 else write 2 fi;
+
+  x := -32768;
+  if x <> y then write -3 else write 3 fi;
+
+  if x < y or y > x then write -4 else write 4 fi;
+
+  y := -1;
+  if y < x or y <= x or not y > x or x > x or y > y then write -5 else write 5 fi;
+
+  y := 32767;
+  if y > x then write 6 else write -6 fi;
+
+  x := 32767;
+  if x < y or y < x or not x = y or x <> y or x <> x then write -7 else write 7 fi;
+
+  x := -1;
+  if x > y or x >= y or y > y or x - 1 > y then write -8 else write 8 fi;
+
+  x := 32500;
+  y := 32500;
+  if x > y or y > x or y <> x then write -9 else write 9 fi;
+
+  y := y * -1;
+  if not x > y or x <= y then write -10 else write 10 fi;
+
+  x := -32768;
+  y := 0;
+  if not y < x and x <= y then write 11 else write -11 fi;
+
+  if y <= x or x > y or x >= y or x > y - 1 then write -12 else write 12 fi;
+
+  if x >= x then write 13 else write -13 fi;
+
+  y := -32500;
+  if y < x or y <= x or not y > x then write -14 else write 14 fi
+  
+end
+
