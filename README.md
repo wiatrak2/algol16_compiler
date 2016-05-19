@@ -177,7 +177,7 @@ and run the program with:
 ```bash
 ./sextium example.sextium
 ```
-Compiling of GCD program:
+Compiling GCD program:
 ![enter image description here](http://i.imgur.com/AqXo8gv.png)
 
 ![enter image description here](http://i.imgur.com/ivG1kIR.png)
